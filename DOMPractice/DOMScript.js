@@ -30,6 +30,25 @@ const anotherP = document.createElement('p');
 anotherP.style.color = 'white';
 anotherP.textContent = "ME TOO!";
 
+const button = document.createElement('button');
+button.setAttribute("id", "btn");
+button.textContent = "click me";
+
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+
+btn.addEventListener('click', function (e) {
+    e.target.style.background = 'blue';
+  });
+
+function alertFunc()
+{
+    alert('Hello World');
+}
+
 //add the elements
 container.appendChild(content);
 content.appendChild(paraOne);
@@ -37,3 +56,4 @@ content.appendChild(headerThree);
 container.appendChild(anotherContent);
 anotherContent.appendChild(anotherHeader);
 anotherContent.appendChild(anotherP);
+anotherContent.appendChild(button);
