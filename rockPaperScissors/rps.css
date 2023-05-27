@@ -1,0 +1,42 @@
+#container
+{
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: sans-serif;
+    align-items: center;
+    border: black solid 2px;
+    border-radius: 5px;
+    background-color: burlywood;
+
+}
+
+#btnContainer
+{
+   display: flex;
+   justify-content: center;
+   
+}
+
+.buttons
+{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+    
+}
+
+.buttons :hover
+{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
