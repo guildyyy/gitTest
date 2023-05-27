@@ -88,14 +88,12 @@ function playRound(playerSelection,computerSelection)
 
 let winCounter = 0;
 let loseCounter = 0;
-let paraText = "";
+
 let paraWinnerText = "";
 
 
 
-const button1 = document.createElement('div');
-button1.classList.add('buttons');
-button1.innerText = "Rock";
+const button1 = document.getElementById('ROCK');
 button1.value = "ROCK";
 button1.addEventListener('click', function()
 {
@@ -110,25 +108,25 @@ button1.addEventListener('click', function()
     {
         loseCounter++;
         paraText = "Lose";
+        losses++;
     }
     else if (result === 2)
     {
         winCounter++;
         paraText = "Win"
+        wins++;
     }
-    para.innerText = paraText;
-    checkWinner(winCounter,loseCounter);
+    updateScore(wins,losses,paraText);
+    checkWinner();
 
 });
 
-const button2 = document.createElement('div');
-button2.classList.add('buttons');
-button2.innerText = "Paper";
+const button2 = document.getElementById('PAPER');
 button2.value = "PAPER";
 button2.addEventListener('click', function()
 {
     const computerSelection = getComputerChoice();
-    const result = playRound("ROCK",computerSelection);
+    const result = playRound("PAPER",computerSelection);
 
     if (result === 0)
     {
@@ -138,25 +136,25 @@ button2.addEventListener('click', function()
     {
         loseCounter++;
         paraText = "Lose";
+        losses++;
     }
     else if (result === 2)
     {
         winCounter++;
         paraText = "Win"
+        wins++;
     }
-    para.innerText = paraText;
-    checkWinner(winCounter,loseCounter);
+    updateScore(wins,losses,paraText);
+    checkWinner();
 
 });
 
-const button3 = document.createElement('div');
-button3.classList.add('buttons');
-button3.innerText = "Scissors";
+const button3 = document.getElementById('SCISSORS');
 button3.value = "SCISSORS";
 button3.addEventListener('click', function(e) 
 {
     const computerSelection = getComputerChoice();
-    const result = playRound("ROCK",computerSelection);
+    const result = playRound("SCISSORS",computerSelection);
 
     if (result === 0)
     {
@@ -166,30 +164,63 @@ button3.addEventListener('click', function(e)
     {
         loseCounter++;
         paraText = "Lose";
+        losses++;
     }
     else if (result === 2)
     {
         winCounter++;
         paraText = "Win"
+        wins++;
     }
-    para.innerText = paraText;
-    checkWinner(winCounter,loseCounter);
+    updateScore(wins,losses,paraText);
+    checkWinner();
 
 });
 
-function checkWinner(playerScore, computerScore)
+function checkWinner()
 {
-    if (playerScore === 5)
+    if (wins === 5)
     {
-        paraWinnerText = "Player Wins";
-        paraWinner.innerText = paraWinnerText;
+        alert("Player Wins!")
+        location.reload();
 
     }
-    else if (computerScore === 5)
+    
+    if (losses === 5)
     {
-        paraWinnerText = "Computer Wins";
-        paraWinner.innerText = paraWinnerText;
+        alert("Computer Wins!")
+        location.reload();
     }
 
+}
+
+var wins = 0;
+var numberOfWins = document.createElement('p');
+var winScore = document.getElementById("wins");
+
+var losses = 0;
+var numberOfLosses = document.createElement('p');
+var loseScore = document.getElementById('losses');
+
+let paraText = "";
+var resultOfMatch = document.createElement('p');
+var resultLabel = document.getElementById("resultLabel");
+
+
+function updateScore(wins,losses,paraText)
+{
+    resultOfMatch.innerText = paraText;
+    resultLabel.append(resultOfMatch);
+    
+    numberOfWins.innerText = wins;
+    winScore.append(numberOfWins);
+
+    numberOfLosses.innerText = losses;
+    loseScore.append(numberOfLosses)
+
+
+
+
+    
 }
 

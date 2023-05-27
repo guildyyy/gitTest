@@ -11,7 +11,7 @@
 
 }
 
-#btnContainer
+#btnContainer , #scrCounter
 {
    display: flex;
    justify-content: center;
@@ -34,9 +34,34 @@
     
 }
 
-.buttons :hover
+.buttons:hover
 {
     transform: scale(1.1);
     border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
+}
+
+#scrCounter
+{
+    margin-top: 10px;
+    background-color: ghostwhite;
+
+}
+
+.scoreItem
+{
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+#resultLabel
+{
+    background-color: black;
 }
