@@ -1,0 +1,116 @@
+body{
+    background-color: #cbe8f8;
+    
+}
+
+
+
+#calculatorBody
+{
+    
+    display: flex;
+    flex-direction: column;
+    background: #858194;
+    width: 600px;
+    border: rgb(132, 132, 132) solid 7px;
+    border-radius: 10px;
+    box-shadow:  15px 15px 5px black;
+    margin:auto;
+    align-items: center;
+}
+
+.row
+{
+    height: 100px;
+    width: 580px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  
+    
+}
+
+.controlButton
+{
+    width: 250px;
+    height: 90px;
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow:  #1c4a61 5px 5px 3px;
+    background-color:  #4ea5dc;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 90px;
+}
+
+.controlButton:hover
+{
+    transform: scale(.9);
+    transition: 10ms;
+}
+
+.button, .operationBtn
+{
+    width: 110px;
+    height: 90px;
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow:  #323237 5px 5px 5px;
+    background-color:  #737081;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 90px;
+  
+}
+
+.button:hover, .operationBtn:hover
+{
+    transform: scale(.9);
+    transition: 10ms;
+}
+
+#equalButton
+{
+    background-color: #ea9423;
+}
+
+#screenContainer
+{
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#screen
+{
+    background-color:  #43b970;
+    height: 200px;
+    width: 550px;
+    max-width: 550px;
+    border: 4px solid #cbcadf;
+    border-radius: 5px;
+    box-shadow:  #323237 5px 5px 5px;
+
+    text-align: right;
+}
+
+p{
+    max-width: 540px;
+    margin:auto;
+    font-size: 60px;
+    word-wrap: break-word;
+}
+
+#equalBtn
+{
+    background-color: maroon;
+}

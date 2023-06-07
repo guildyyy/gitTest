@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <div id = "container">
+        <div id="calculatorBody">
+            <div id="screenContainer" >
+                <div id="screen">
+                    <p id="topDisplay"></p>
+                    <p id="mainDisplay"></p>
+                </div>
+            </div>
+            <div id="controlPanel" class="row">
+                <div class="controlButton" id = "resetBtn">RESET</div>
+                <div class = "controlButton" id="delBtn">DEL</div>
+            </div>
+            <div id="firstRow" class="row">
+                <div class="button" data-value="7" data-key="103">7</div>
+                <div class="button" data-value="8" data-key="104">8</div>
+                <div class="button" data-value="9" data-key="105">9</div>
+                <div class="operationBtn" id="divideBtn" data-value="11" data-key="111">/</div>
+            </div>
+            <div id = 'secondRow' class="row">
+                <div class="button"  data-value="4" data-key="100">4</div>
+                <div class="button" data-value="5" data-key="101">5</div>
+                <div class="button" data-value="6" data-key="102">6</div>
+                <div class="operationBtn"  id="multiplyBtn" data-value="12" data-key="106">x</div>
+            </div>
+            <div id="thirdRow" class="row">
+                <div class="button" data-value="1" data-key="97">1</div>
+                <div class="button" data-value="2" data-key="98">2</div>
+                <div class="button" data-value="3" data-key="99">3</div>
+                <div class="operationBtn" id="minusBtn" data-value="13" data-key="109">-</div>
+            </div>
+            <div id="fourthRow" class="row">
+                <div class="button" data-value="0" data-key="96">0</div>
+                <div class="button" data-value="10" data-key="110">.</div>
+                <div class="operationBtn" id="addBtn" data-value="14" data-key="107">+</div>
+                <div class="button" id = "equalBtn" data-value="15", data-key="13">=</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
